@@ -174,6 +174,27 @@
     border: none;
   }
 
+  /* Time line */
+
+  .time-line-container {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .time-line-horizontal {
+    width: 20%;
+    height: 5px;
+    background-color: #000;
+    margin-left: -1rem;
+  }
+
+  .time-line-vertical {
+    width: 5px;
+    height: 15px;
+    background-color: #000;
+  }
+
   /* Media Queries */
   @media (width <= 1100px) {
     .resume {
