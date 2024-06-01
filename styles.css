@@ -150,6 +150,7 @@
     height: 90%;
     max-width: 90%;
     box-sizing: border-box;
+    overflow-y: auto;
   }
 
   .close-button {
@@ -185,14 +186,14 @@
   .time-line-horizontal {
     width: 20%;
     height: 5px;
-    background-color: #000;
+    background-color: #ffffff;
     margin-left: -1rem;
   }
 
   .time-line-vertical {
     width: 5px;
     height: 15px;
-    background-color: #000;
+    background-color: #ffffff;
   }
 
   /* Media Queries */
