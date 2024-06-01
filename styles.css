@@ -18,8 +18,21 @@
   }
   
   body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
+    animation: colorChange 10s infinite alternate;
+    background: linear-gradient(45deg, #ff0, #00f);
+    background-size: 400% 400%;
+  }
+
+  @keyframes colorChange {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   /* Link style */
@@ -55,8 +68,10 @@
 
   .resume {
     margin: 20px auto;
+    height: auto;
     border: 1px solid #f5f5f5;
     box-shadow: 1px 1px 7px 7px #f5f5f5;
+    background-color:#fff;
     max-width: 1100px;
     display: flex;
   }
@@ -347,6 +362,11 @@
 
   /* Media Queries */
   @media (width <= 1100px) {
+    .bubble {
+      left: 85px;
+      top: 47px;
+    }
+
     .resume {
       flex-direction: column;
       max-width: 100%;
@@ -366,6 +386,12 @@
   }
   
   @media (width <= 768px) {
+    .bubble {
+      width: 100px;
+      left: 75px;
+      top: 40px;
+    }
+
     .intro-information-container, .main-information-container {
       padding: 15px;
     }
