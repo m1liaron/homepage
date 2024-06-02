@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         siteFrame.src = "";
       }
     })
-
+    
     animateSkillBars();
     typeEffect();
   });
