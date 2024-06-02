@@ -89,6 +89,7 @@
     background-color: #494e5f;
     color: #fff;
     padding: 40px;
+    max-width: 500px;
   }
   
   .main-information-container {
@@ -402,70 +403,78 @@
 
   /* Time line */
 
-  .time-line-container {
+  .timeline-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Adjusted from 'center' to 'flex-start' */
     margin-top: 20px;
-    max-width: 550px;
-    overflow: auto;
-}
-
-.time-line {
+    padding: 20px; /* Adjusted padding */
+    background-color: #333;
+    border-radius: 10px;
+    overflow-x: auto;
+  }
+  
+  .timeline {
     display: flex;
     align-items: center;
-}
-
-.time-line-horizontal {
-    width: 20%;
-    height: 2px;
-    background-color: #ffffff;
-}
-
-.time-point {
+    padding: 10px 0; /* Adjusted padding */
+    max-width: 100%; /* Allow the timeline to take up full available width */
+  }
+  
+  .timeline-point {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 10px;
-}
-
-.time-circle {
+    color: #fff; /* Changed color to ensure visibility against background */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .timeline-horizontal {
+    width: 50px;
+    height: 2px;
+    background-color: #ffffff;
+    flex-shrink: 0;
+  }
+  
+  .timeline-circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     background-color: #ffffff;
-    margin: 5px 0;
-    transition: transform .3s ease-in-out;
-}
-
-.time-circle:hover {
-  animation: circle-pulse 1.5s infinite;
-}
-
-.time-circle::before {
+    margin: 10px 0;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .timeline-circle:hover {
+    animation: circle-pulse 1.5s infinite;
+  }
+  
+  .timeline-circle::before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: #000000;
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-@keyframes circle-pulse {
-  0% {
-      box-shadow: 0 0 0 0px rgba(196, 216, 63, 0.763),
-                  0 0 0 5px rgba(196, 216, 63, 0.763),
-                  0 0 0 10px rgba(196, 216, 63, 0.763);
   }
-  100% {
-      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0),
-                  0 0 0 15px rgba(255, 255, 255, 0),
-                  0 0 0 20px rgba(255, 255, 255, 0);
+  
+  @keyframes circle-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
-}
+  
 
   /* Dowload button styles  */
 
